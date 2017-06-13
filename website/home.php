@@ -2,7 +2,7 @@
 File:	home.php
 Author: George Main IV
 
-This is the home page after login. This will disolay all the auctions that belong to the current organization.
+This is the home page after login. This displays all the auctions that belong to the current organization.
  -->
 
 <?php
