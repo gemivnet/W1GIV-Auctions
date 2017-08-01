@@ -36,3 +36,34 @@ Multiple checkout stations can be setup to make checkout easier for the attendee
 After the auction, the organization can send out promotional emails to the attendees who opted to receive emails upon registration. Attendees can unsubscribe from emails at any time.
 
 ## Installation
+
+The following installation procedure is for Ubuntu Server 17.04.
+
+### LAMP Stack
+
+```sudo apt-get update```
+
+Install Apache
+
+```sudo apt-get install apache2```
+
+Install MySQL
+
+```sudo apt-get install mysql-server```
+
+Take note of the password chosen for the MySQL database.
+
+Install PHP
+
+```sudo apt-get install php7.0 libapache2-mod-php7.0 php7.0-cli php7.0-common```
+
+Install PHPMyAdmin
+
+``sudo apt-get install phpmyadmin```
+
+During install select apache2, choose yes, and then enter a password for PHPMyAdmin.
+
+Restart the server.
+
+```sudo shutdown -r now```
+
