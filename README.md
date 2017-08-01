@@ -39,8 +39,6 @@ After the auction, the organization can send out promotional emails to the atten
 
 The following installation procedure is for Ubuntu Server 17.04.
 
-### LAMP Stack
-
 ```sudo apt-get update```
 
 Install Apache
@@ -67,3 +65,40 @@ Restart the server.
 
 ```sudo shutdown -r now```
 
+If you connect to the IP of the server with a web browser, you should see the default Apache page.
+
+Create link for PHPMyAdmin
+
+Run
+
+```cd /var/www```
+
+Then run
+
+```ls```
+
+The subdirectory should either be ```html``` or ```public_html```. In this case, it is ```html```. Replace with whatever if shown.
+
+```sudo ln -s /usr/share/phpmyadmin /var/www/html```
+
+Open SERVER_IP/phpmyadmin and login.
+
+On the left hand side click 'New' to create a new database. Name it 'auction' and click create. Next click Import near the top right. Choose the SQL template file or a SQL file if you are importing from a previous installation. Then click 'Go'.
+
+Next open up shell. Run the following commands:
+
+Replace ```html``` with ```public_html``` if necessary.
+
+```cd /var/www/html
+sudo rm -r index.html
+sudo git clone https://github.com/gemivnet/W1GIV-Auctions.git
+sudo mv W1GIV-Auctions/website/* .
+sudo rm -rf W1GIV-Auctions/
+sudo git clone https://github.com/twbs/bootstrap.git
+sudo mv bootstrap/dist/css bootstrap/
+sudo git clone https://github.com/almasaeed2010/AdminLTE.git
+sudo mv AdminLTE/dist/ .
+sudo mv AdminLTE/plugins/ .
+sudo nano scripts/connect.php```
+
+Set the username (probably root) and password of the MySQL database. Then press Ctrl-X, 'Y' and 'Enter'. 
