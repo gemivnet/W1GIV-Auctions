@@ -100,11 +100,6 @@ sudo rm -r index.html
 sudo git clone https://github.com/gemivnet/W1GIV-Auctions.git
 sudo mv W1GIV-Auctions/website/* .
 sudo rm -rf W1GIV-Auctions/
-sudo git clone https://github.com/twbs/bootstrap.git
-sudo mv bootstrap/dist/css bootstrap/
-sudo git clone https://github.com/almasaeed2010/AdminLTE.git
-sudo mv AdminLTE/dist/ .
-sudo mv AdminLTE/plugins/ .
 sudo nano scripts/connect.php
 ```
 
