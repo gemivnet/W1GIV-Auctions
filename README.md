@@ -37,8 +37,6 @@ After the auction, the organization can send out promotional emails to the atten
 
 ## Installation
 
-The following installation procedure is for Ubuntu Server 17.04.
-
 ```sudo apt-get update```
 
 Install Apache
@@ -51,13 +49,26 @@ Install MySQL
 
 Take note of the password chosen for the MySQL database.
 
+Next, set the default sql mode.
+
+```sudo nano /etc/mysql/my.cnf```
+
+Add the following to the end of the file
+
+```
+[mysqld]
+sql-mode=""
+```
+
+Save and exit.
+
 Install PHP
 
-```sudo apt-get install php7.0 libapache2-mod-php7.0 php7.0-cli php7.0-common```
+```sudo apt-get install php7.0 libapache2-mod-php7.0 php7.0-cli php7.0-common php7.0-mysql```
 
 Install PHPMyAdmin
 
-``sudo apt-get install phpmyadmin```
+```sudo apt-get install phpmyadmin```
 
 During install select apache2, choose yes, and then enter a password for PHPMyAdmin.
 
