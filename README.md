@@ -86,10 +86,6 @@ Run
 
 Then run
 
-```ls```
-
-The subdirectory should either be ```html``` or ```public_html```. In this case, it is ```html```. Replace with whatever if shown.
-
 ```sudo ln -s /usr/share/phpmyadmin /var/www/html```
 
 Open SERVER_IP/phpmyadmin and login.
@@ -97,8 +93,6 @@ Open SERVER_IP/phpmyadmin and login.
 On the left hand side click 'New' to create a new database. Name it 'auction' and click create. Next click Import near the top right. Choose the SQL template file or a SQL file if you are importing from a previous installation. Then click 'Go'.
 
 Next open up shell. Run the following commands:
-
-Replace ```html``` with ```public_html``` if necessary.
 
 ```cd /var/www/html
 sudo rm -r index.html
