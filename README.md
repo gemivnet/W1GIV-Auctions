@@ -86,15 +86,16 @@ Run
 
 Then run
 
-```sudo ln -s /usr/share/phpmyadmin /var/www/html```
+```sudo ln -s /usr/share/phpmyadmin /var/www/html/```
 
-Open SERVER_IP/phpmyadmin and login.
+Open SERVER_IP/phpmyadmin and login (username is root).
 
-On the left hand side click 'New' to create a new database. Name it 'auction' and click create. Next click Import near the top right. Choose the SQL template file or a SQL file if you are importing from a previous installation. Then click 'Go'.
+On the left hand side click 'New' to create a new database. Name it ```auction``` and click create. Next click Import near the top right. Choose the SQL template file or a SQL file if you are importing from a previous installation. Then click 'Go'.
 
 Next open up shell. Run the following commands:
 
-```cd /var/www/html
+```
+cd /var/www/html
 sudo rm -r index.html
 sudo git clone https://github.com/gemivnet/W1GIV-Auctions.git
 sudo mv W1GIV-Auctions/website/* .
@@ -104,6 +105,7 @@ sudo mv bootstrap/dist/css bootstrap/
 sudo git clone https://github.com/almasaeed2010/AdminLTE.git
 sudo mv AdminLTE/dist/ .
 sudo mv AdminLTE/plugins/ .
-sudo nano scripts/connect.php```
+sudo nano scripts/connect.php
+```
 
 Set the username (probably root) and password of the MySQL database. Then press Ctrl-X, 'Y' and 'Enter'. 
