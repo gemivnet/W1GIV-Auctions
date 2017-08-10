@@ -465,17 +465,17 @@ if ($sendEmail & $recieptEmail) {
     require_once('scripts/PHPMailer/class.smtp.php');
 
     $mail = new PHPMailer;
+	$mail -> isSMTP();
+	$mail -> Host = $emailHost;
+	$mail -> SMTPAuth = true;
+	$mail -> Username = $emailUsername;
+	$mail -> Password = $emailPassword;
+	$mail -> SMTPSecure = 'ssl';
+	$mail -> Port = $emailPort;
 
-    $mail->isSMTP();
-    $mail->Host = 'HOST';
-    $mail->SMTPAuth = true;
-    $mail->Username = 'EMAIL';
-    $mail->Password = 'PASSWORD';
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port = 465;
+	$mail -> From = $emailFrom;
 
-    $mail->From = 'noreply@w1giv.com';
-    $mail->FromName = 'W1GIV Auctions';
+    $mail->FromName = $_SESSION['organization'];
     $mail->addAddress($attendeeEmail, $attendeeName);
 
 
