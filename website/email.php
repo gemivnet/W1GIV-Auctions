@@ -34,14 +34,14 @@ if (isset($_POST['subject'])) {
 	$mail = new PHPMailer;
 	
 	$mail -> isSMTP();
-	$mail -> Host = 'HOST';
+	$mail -> Host = $emailHost;
 	$mail -> SMTPAuth = true;
-	$mail -> Username = 'EMAIL';
-	$mail -> Password = 'PASSWORD';
+	$mail -> Username = $emailUsername;
+	$mail -> Password = $emailPassword;
 	$mail -> SMTPSecure = 'ssl';
-	$mail -> Port = 465;
+	$mail -> Port = $emailPort;
 
-	$mail -> From = 'noreply@w1giv.com';
+	$mail -> From = $emailFrom;
 	$mail -> FromName = $_SESSION['organization'];
 	
 //	$mail -> AddAddress('noreply@w1giv.com', 'Attendee');
