@@ -1,9 +1,6 @@
 <?php
 
-$hostname = "localhost";
-$username = "USERNAME";
-$dbname = "auction";
-$password = "PASSWORD";
+include('configuration.php');
 
 $mysqli = new mysqli($hostname, $username, $password, $dbname);
 if ($mysqli->connect_errno) {
